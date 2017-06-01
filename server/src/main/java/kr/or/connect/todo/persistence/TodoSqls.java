@@ -8,9 +8,9 @@ public class TodoSqls {
 	static final String UPDATE_BY_ID =
 			"UPDATE todo SET completed = :completed WHERE id= :id";
 	static final String SELECT_ALL =
-			"SELECT * FROM todo ORDER BY id desc"
+			"SELECT * FROM todo ORDER BY id desc";
 	static final String SELECT_BY_COMLETED =
-			"SELECT * FROM todo WHERE completed = :completed ORDER BY id desc"
+			"SELECT * FROM todo WHERE completed = :completed ORDER BY id desc";
 	static final String COUNT_NOT_COMPLETED =
-			"SELECT COUNT(*) FROM todo WHERE completed = 0"
+			"SELECT COUNT(*) FROM todo WHERE completed = 0";
 }

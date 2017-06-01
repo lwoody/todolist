@@ -7,6 +7,9 @@ import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
 import org.springframework.stereotype.Repository;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.BeanPropertySqlPrameterRowSource;
+import java.util.Map;
+import java.util.List;
+import java.util.Collections;
 
 @Repository
 public class TodoDao {
@@ -29,7 +32,7 @@ public class TodoDao {
 	}
 
 	//DELETE_BY_ID
-	public int deleteById(Integer id) {
+	public int deleteById(int id) {
 		Map<String, ?> params = Collections.singletonMap("id", id);
 		return jdbc.update(TodoSqls.DELETE_BY_ID, params);
 	}
@@ -46,10 +49,10 @@ public class TodoDao {
 		return jdbc.query(TodoSqls.SELECT_ALL, params, rowMapper);
 	}
 
-	//SELECT_BY_COMLETED
+	//SELECT_BY_COMPLETED
 	public List<Todo> selectByCompleted(int completed){
 		Map<String, Object> params = Collections.singletonMap("completed", completed);
-		return jdbc.query(TodoSqls.SELECT_BY_COMPLETED)
+		return jdbc.query(TodoSqls.SELECT_BY_COMPLETED, params, rowMapper);
 	}
 
 	//UPDATE_BY_ID
