@@ -23,6 +23,11 @@ public class Todo {
 		this.date = date;
 	}
 
+	@Override
+	public String toString() {
+		return "Todo [id=" + id + ", todo=" + todo + ", completed=" + completed + ", date=" + date + "]";
+	}
+
 	public Integer getId() {
 		return id;
 	}
