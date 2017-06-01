@@ -3,7 +3,7 @@ package kr.or.connect.todo.service;
 import org.springframework.stereotype.Service;
 import kr.or.connect.todo.Todo;
 import kr.or.connect.todo.persistence.TodoDao;
-import java.util.Collection;
+import java.util.List;
 
 @Service
 public class TodoService {
@@ -40,8 +40,8 @@ public class TodoService {
   }
 
   //DELETE_BY_ID
-  public boolean deleteById(int id){
-    return 1 == todoDao.deleteById(id);
+  public boolean delete(int id){
+    return 1 == todoDao.delete(id);
   }
 
   //INSERT

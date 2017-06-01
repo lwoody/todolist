@@ -3,21 +3,21 @@ package kr.or.connect.todo;
 import java.util.Date;
 
 public class Todo {
-	private Integer id;
+	private int id;
 	private String todo;
-	private Integer completed;
+	private int completed;
 	private Date date;
 
 	public Todo() {
 	}
 
-	public Todo(Integer id, String todo, Integer completed, Date date) {
+	public Todo(int id, String todo, int completed, Date date) {
 		this(todo, completed, date);
 		this.id = id;
 		this.date = date;
 	}
 
-	public Todo(String todo, Integer completed, Date date) {
+	public Todo(String todo, int completed, Date date) {
 		this.todo = todo;
 		this.completed = completed;
 		this.date = date;
@@ -28,11 +28,11 @@ public class Todo {
 		return "Todo [id=" + id + ", todo=" + todo + ", completed=" + completed + ", date=" + date + "]";
 	}
 
-	public Integer getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
@@ -44,11 +44,11 @@ public class Todo {
 		this.todo = todo;
 	}
 
-	public Integer getCompleted() {
+	public int getCompleted() {
 		return completed;
 	}
 
-	public void setCompleted(Integer completed) {
+	public void setCompleted(int completed) {
 		this.completed = completed;
 	}
 
